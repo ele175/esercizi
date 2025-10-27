@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+        transition: all 0.3s ease;
+      }
+
+      .theme {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dark Mode</h1>
+    <div>
+      <button class="btn">Dark Mode</button>
+    </div>
+
+    <script>
+      const button = document.querySelector(".btn");
+      const body = document.body;
+
+      button.addEventListener("click", () => {
+        body.classList.toggle("theme");
+
+        // Cambia anche il testo del bottone
+        if (body.classList.contains("theme")) {
+          button.textContent = "Light Mode";
+        } else {
+          button.textContent = "Dark Mode";
+        }
+      });
+    </script>
+  </body>
+</html>
