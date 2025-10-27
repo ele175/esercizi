@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lord of the Rings Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      background-color: #f4f4f4;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Card - Il Signore degli Anelli</h1>
+  <div class="card">
+    <h2 class="name">Caricamento...</h2>
+    <img class="image" src="" alt="Immagine personaggio">
+  </div>
+
+  <script>
+    async function fetchCard() {
+      try {
+        // API delle carte di RingsDB
+        const response = await fetch("https://ringsdb.com/api/public/cards/");
+        const cards = await response.json();
+
+        // Filtra solo le carte con immagine
+        const cardsWithImages = cards.filter(card => card.imagesrc);
+
+        // Prende una carta a caso
+        const randomCard = cardsWithImages[Math.floor(Math.random() * cardsWithImages.length)];
+
+        // Mostra nome e immagine
+        document.querySelector(".name").textContent = randomCard.name;
+        document.querySelector(".image").src = `https://ringsdb.com/${randomCard.imagesrc}`;
+        document.querySelector(".image").alt = randomCard.name;
+
+      } catch (error) {
+        console.error("Errore nel fetch della carta:", error);
+        document.querySelector(".name").textContent = "Errore nel caricamento della carta.";
+      }
+    }
+
+    fetchCard();
+  </script>
+</body>
+</html>
