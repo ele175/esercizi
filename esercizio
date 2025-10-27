@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>To-do List</h1>
+      <input type="text" placeholder="Scrivi un task..." />
+      <button onclick="addProduct()">Aggiungi</button>
+      <ul></ul>
+    </div>
+    <script src=function addProduct() 
+  const input = document.querySelector;
+  const ul = document.querySelector
+  const taskText = input.value.trim();"  
+  if (taskText === "") return;  const li = document.createElement("li");const 
+  checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+   const textNode = document.createTextNode(" " + taskText);
+ li.appendChild(checkbox);
+  li.appendChild(textNode);
+    ></script><>
+</body>
+</html>

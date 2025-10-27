@@ -1,0 +1,33 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>To-do List</h1>
+      <input type="text" placeholder="Aggiungi un task..." id="taskInput" />
+      <button onclick="addTask()">Aggiungi</button>
+      <ul id="taskList"></ul>
+    </div>
+    <script src="function addTask() {
+  const input = document.getElementById('taskInput');
+  const taskText = input.value.trim();
+
+  if (taskText === '') {
+    alert('Inserisci un task!');
+    return;
+  }
+  const li = document.createElement('li');
+    const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  const textNode = document.createTextNode(' ' + taskText);
+   li.appendChild(checkbox);
+  li.appendChild(textNode);
+  document.getElementById('taskList').appendChild(li);
+  </script>
+  </body>
+</html>

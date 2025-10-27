@@ -1,0 +1,194 @@
+# Hello World
+
+Welcome to your new markdown file!
+
+```markdown
+# Hello World
+
+This is your starting point.
+!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+ rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Navbar Viaggi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ff8056;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+    }
+
+    /* Icone lato destro */
+    .navbar-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+
+    .navbar-icons i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Dropdown login */
+    .login-dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .login-dropdown input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .login-dropdown button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #ff8056;
+      color: white;
+      cursor: pointer;
+    }
+
+    .login-dropdown button:hover {
+      background: #e76e46;
+    }
+/* Navbar */
+    .navbar {
+      background-color: #ff8056;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+    }
+
+    /* Icone lato destro */
+    .navbar-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+
+    .navbar-icons i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Dropdown login */
+    .login-dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .login-dropdown input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .login-dropdown button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #ff8056;
+      color: white;
+      cursor: pointer;
+    }
+
+    .login-dropdown button:hover {
+      background: #e76e46;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Destinazioni</a></li>
+      <li><a href="#">Modo di viaggiare</a></li>
+      <li><a href="#">Tipo di vacanza</a></li>
+      <li><a href="#">Viaggia per stagione</a></li>
+    </ul>
+
+    <div class="navbar-icons">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-user" id="userIcon"></i>
+
+      <!-- Dropdown login -->
+      <div class="login-dropdown" id="loginDropdown">
+        <form>
+          <input type="email" placeholder="E-mail" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Accedi</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+</body>
+</html>
